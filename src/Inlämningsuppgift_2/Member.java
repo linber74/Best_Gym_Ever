@@ -1,4 +1,4 @@
-package Sprint_2.Gym_Assignment2;
+package Inlämningsuppgift_2;
 
 import java.time.LocalDate;
 
