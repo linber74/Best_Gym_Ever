@@ -3,7 +3,7 @@ package Assigment_2;
 public enum MemberType {
 
     STANDARD ("Standard"),
-    GOLD ("Gold"),
+    GOLD ("Guld"),
     PLATINA("Platina");
 
     public final String memberType;
@@ -21,7 +21,7 @@ public enum MemberType {
 
             case "standard": return STANDARD;
 
-            case "gold": return GOLD;
+            case "guld": return GOLD;
 
             case "platina": return PLATINA;
 

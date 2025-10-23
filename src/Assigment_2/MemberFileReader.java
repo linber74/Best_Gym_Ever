@@ -18,24 +18,38 @@ public class MemberFileReader {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 
             String line;
+            boolean isFirstLine = true;
 
             while ((line = reader.readLine()) != null) {
-                String[] data = line.split(",");
+
+                if (isFirstLine) {
+                    isFirstLine = false;
+                    continue;
+                }
+
+                if  (line.trim().isEmpty()) continue;
+
+                //String[] data = line.split(",");
+                String[] data = line.trim().split("\\s*;\\s*");
+
+
+                if (data.length < 7) {
+                    System.out.println("Ogiltig rad (för få fält): " + line);
+                    continue;
+                }
 
                 try {
+                    String name = data[0].trim();
+                    String address = data[1].trim();
+                    String email = data[2].trim();
+                    String personnummer = data[3].trim();
                     LocalDate memberSince = LocalDate.parse(data[4].trim(), dtf);
                     LocalDate lastPayment = LocalDate.parse(data[5].trim(), dtf);
                     MemberType memberType = MemberType.fromString(data[6].trim());
 
-                    Member member = new Member(
-                            data[0].trim(),
-                            data[1].trim(),
-                            data[2].trim(),
-                            data[3].trim(),
-                            memberSince,
-                            lastPayment,
-                            memberType
-                    );
+
+                    Member member = new Member(name, address, email, personnummer,
+                            memberSince, lastPayment, memberType);
 
                     members.add(member);
 
