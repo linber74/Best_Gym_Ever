@@ -50,4 +50,12 @@ public class Member  {
     public MemberType getMemberType() {
         return memberType;
     }
+
+    boolean isCurrentMember() {
+        return lastPayment.plusYears(1).isAfter(LocalDate.now());
+    }
+
+    boolean isFormerMember() {
+        return lastPayment.plusYears(1).isBefore(LocalDate.now());
+    }
 }
