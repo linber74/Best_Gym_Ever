@@ -17,7 +17,7 @@ public class GymSystem {
             System.out.println("OBehörig!");
         }
         else if (member.isCurrentMember()){
-            System.out.println("Medlem! (" + member.getMemberType().getFormattedMemberType());
+            System.out.println("Medlem! (" + member.getMemberType().getFormattedMemberType() + ")");
             System.out.println("Välkommen " + member.getName());
             log.log(member);
         }

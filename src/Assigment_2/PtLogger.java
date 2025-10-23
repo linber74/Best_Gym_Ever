@@ -9,7 +9,7 @@ public class PtLogger {
 
     public void log(Member member) {
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("pt_log.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/Assigment_2/pt_log.txt", true))) {
 
             writer.write(member.getName() + ";" + member.getPersonNr() + ";" + LocalDate.now());
             writer.newLine();

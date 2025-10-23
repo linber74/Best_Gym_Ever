@@ -61,7 +61,7 @@ public class MemberFileReader {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Kan inte Läsa filen: " + e.getMessage());;
+            System.out.println("Kan inte Läsa filen: " + e.getMessage());
         }
         return members;
     }

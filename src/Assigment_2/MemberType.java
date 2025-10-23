@@ -28,6 +28,4 @@ public enum MemberType {
             default: throw new IllegalArgumentException("Ogiltig Medlemstyp: " + input);
         }
     }
-
-
 }
