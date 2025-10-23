@@ -1,4 +1,4 @@
-package Inlämningsuppgift_2;
+package Assigment_2;
 
 import java.time.LocalDate;
 
