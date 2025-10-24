@@ -31,7 +31,7 @@ public class UserInputHandler {
             if (readValidName(input)) {
                 return input;
             }
-            System.out.println("Ange förnamn och efternamn eller personnummer (YYMMDD-XXXX): ");
+            System.out.println("Ogiltig inmatning. Ange namn eller personnummer.");
         }
     }
 
