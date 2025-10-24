@@ -29,7 +29,6 @@ public class MemberFileReader {
 
                 if  (line.trim().isEmpty()) continue;
 
-                //String[] data = line.split(",");
                 String[] data = line.trim().split("\\s*;\\s*");
 
 
